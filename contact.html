@@ -12,49 +12,8 @@
     <meta
       property="og:description"
       content="Our main goal is to provide the highest level of transportation services to our customers across the United States, ensuring safe and timely deliveries. We are committed to fair and competitive pricing while maintaining integrity, fairness, and honesty with our customers and business partners. We carry your trust!"
-      main
-      goal
-      is
-      to
-      provide
-      the
-      highest
-      level
-      of
-      transportation
-      services
-      Canadian
-      customers
-      as
-      well
-      as
-      safe
-      and
-      timely
-      deliveries,
-      with
-      fair
-      and
-      competitive
-      pricing
-      while
-      maintaining
-      integrity,
-      fairness
-      and
-      honesty
-      with
-      our
-      customers
-      and
-      business
-      partners.
-      We
-      carry
-      your
-      trust!
     />
-    <meta property="og:site_name" content="siplogistics.ca" />
+    <meta property="og:site_name" content="ifmlogistics.com" />
     <meta property="og:image" content="images/logos/logo-round.png" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="600" />
@@ -76,7 +35,7 @@
       sizes="16x16"
       href="images/logos/16x16%20logo.png"
     />
-    <title>SIP Logistics Canada</title>
+    <title>IFM Logistics Inc</title>
 
     <!-- styles -->
     <!-- helpers -->
@@ -117,6 +76,57 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- responsive stylesheet -->
     <link rel="stylesheet" href="css/responsive.css" />
+    
+    <style>
+      /* SMS Consent Checkbox Styling */
+      .sms-consent-box {
+        background: #f8f9fa;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 15px;
+      }
+      
+      .sms-checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      
+      .sms-checkbox-container input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      
+      .sms-consent-text {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+        cursor: pointer;
+      }
+      
+      .sms-consent-text a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .sms-consent-text a:hover {
+        text-decoration: underline;
+      }
+      
+      .sms-consent-note {
+        font-size: 12px;
+        color: #888;
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <!--PreLoader-->
@@ -151,11 +161,9 @@
             <li class="">
               <a href="about.html">About us</a>
             </li>
-
             <li class="">
               <a href="services.html">Services</a>
             </li>
-
             <li><a href="contact.html">Contact us</a></li>
           </ul>
         </div>
@@ -192,6 +200,29 @@
               <p>
                 <input
                   type="text"
+                  placeholder="Phone Number"
+                  name="phone"
+                  id="phone"
+                />
+              </p>
+              
+              <!-- SMS CONSENT CHECKBOX - TCR COMPLIANT -->
+              <div class="sms-consent-box">
+                <div class="sms-checkbox-container">
+                  <input type="checkbox" id="smsConsent" name="smsConsent">
+                  <label for="smsConsent" class="sms-consent-text">
+                    I consent to receive <strong>conversational and informational</strong> SMS messages from IFM Logistics Inc regarding shipments, deliveries, and logistics services. 
+                    Reply STOP to opt-out; Reply HELP for support. Message and data rates may apply; 
+                    Messaging frequency may vary. 
+                    <a href="privacy-policy.html" target="_blank">View our Privacy Policy</a>
+                  </label>
+                </div>
+                <p class="sms-consent-note">Optional - You can still contact us without SMS consent</p>
+              </div>
+              
+              <p>
+                <input
+                  type="text"
                   placeholder="Subject"
                   name="subject"
                   id="subject"
@@ -207,6 +238,11 @@
               <button type="submit" id="submit" class="thm-btn">
                 Submit Now <i class="fa fa-arrow-right"></i>
               </button>
+              <p style="font-size: 12px; color: #888; margin-top: 15px;">
+                By submitting this form, you agree to our 
+                <a href="privacy-policy.html" style="color: #3498db;">Privacy Policy</a> and 
+                <a href="terms.html" style="color: #3498db;">Terms of Service</a>.
+              </p>
             </form>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
@@ -218,8 +254,8 @@
                   </div>
                   <div class="content">
                     <p>
-                      375 W. Dundee Rd, Unit 161
-Wheeling, IL 60090, USA
+                      375 W. Dundee Rd, Unit 161<br>
+                      Wheeling, IL 60090, USA
                     </p>
                   </div>
                 </li>
@@ -236,18 +272,12 @@ Wheeling, IL 60090, USA
                     <i class="icon icon-Phone2"></i>
                   </div>
                   <div class="content">
-                    <p>+1 (765) 222-4545
-</p>
+                    <p>+1 (765) 222-4545</p>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <!-- <div class="col-md-12">				
-				<div class="google-map" id="contact-page-google-map" data-map-lat="43.6372846" data-map-lng="-79.531191917" data-map-zoom="10" data-map-title="SIP Logistics HQ"></div>
-			</div> -->
         </div>
       </div>
     </section>
@@ -275,18 +305,10 @@ Wheeling, IL 60090, USA
                   <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a
-                    href="about.html"
-                    
-                    ><i class="fa fa-instagram"></i
-                  ></a>
+                  <a href="about.html"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a
-                    href="about.html"
-                    
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
+                  <a href="about.html"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
             </div>
@@ -312,11 +334,13 @@ Wheeling, IL 60090, USA
               <li><a href="services.html">Our Services</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-6 footer-widget">
             <div class="title">
-              <h3><span>Quick Links</span></h3>
+              <h3><span>Contact Info</span></h3>
             </div>
             <ul class="contact-infos">
               <li>
@@ -324,8 +348,8 @@ Wheeling, IL 60090, USA
                   <i class="fa fa-map-marker"></i>
                 </div>
                 <div class="text-box">
-                  <p>375 W. Dundee Rd, Unit 161
-Wheeling, IL 60090, USA</p>
+                  <p>375 W. Dundee Rd, Unit 161<br>
+                  Wheeling, IL 60090, USA</p>
                 </div>
               </li>
               <li>
@@ -333,8 +357,7 @@ Wheeling, IL 60090, USA</p>
                   <i class="fa fa-phone"></i>
                 </div>
                 <div class="text-box">
-                  <p>+1 (765) 222-4545
-</p>
+                  <p>+1 (765) 222-4545</p>
                 </div>
               </li>
               <li>
@@ -363,9 +386,6 @@ Wheeling, IL 60090, USA</p>
       <div class="thm-container clearfix">
         <div class="text-center">
           <p>Copyright © IFM Logistics Inc 2025. All rights reserved.</p>
-        </div>
-        <div class="pull-right">
-          <p></p>
         </div>
       </div>
     </section>
@@ -401,8 +421,11 @@ Wheeling, IL 60090, USA</p>
           var contactParams = {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
-            duration: document.getElementById("subject").value,
+            phone: document.getElementById("phone").value,
+            subject: document.getElementById("subject").value,
             message: document.getElementById("message").value,
+            smsConsent: document.getElementById("smsConsent").checked,
+            timestamp: new Date().toISOString()
           };
 
           if (
@@ -410,19 +433,34 @@ Wheeling, IL 60090, USA</p>
             contactParams.name &&
             contactParams.message
           ) {
-            (document.getElementById("name").value = ""),
-              (document.getElementById("email").value = ""),
-              (document.getElementById("subject").value = ""),
-              (document.getElementById("message").value = ""),
-              (document.getElementById("submit").value = "Submit");
+            // IMPORTANT: Log SMS consent for TCR compliance
+            if (contactParams.smsConsent) {
+              console.log('SMS Consent granted at:', contactParams.timestamp);
+              console.log('Contact info:', {
+                name: contactParams.name,
+                phone: contactParams.phone,
+                email: contactParams.email
+              });
+              // TODO: Send this to your backend to store in database
+            }
+            
+            // Clear form
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("subject").value = "";
+            document.getElementById("message").value = "";
+            document.getElementById("smsConsent").checked = false;
+            document.getElementById("submit").value = "Submit";
 
-            setTimeout((res) => {
+            setTimeout(function() {
               alert(
                 "We have received your message. One of our team members will be in touch with you soon!"
               );
-            }, 2000);
+            }, 500);
           } else {
             alert("Please add all required fields!");
+            document.getElementById("submit").value = "Submit";
           }
         });
     </script>
