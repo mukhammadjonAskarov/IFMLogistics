@@ -7,8 +7,11 @@
     <title>Terms of Service - IFM Logistics Inc</title>
     
     <!-- Link to your existing CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="plugins/Stroke-Gap-Icons-Webfont/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     
     <style>
         .terms-container {
@@ -78,8 +81,43 @@
     </style>
 </head>
 <body>
-    
-    <!-- You can include your existing header/navigation here -->
+    <!--PreLoader-->
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <!--PreLoader Ends-->
+
+    <!-- Start header -->
+    <header id="header2" class="clearfix stricky">
+      <div class="logo pull-left">
+        <a href="index.html">
+          <img
+            src="images/logos/SIP%20logo.png"
+            alt="logo"
+            height="95px"
+            width="200px"
+          />
+        </a>
+      </div>
+      <div class="nav-holder pull-right">
+        <div class="nav-header">
+          <button><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="nav-footer">
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End header  -->
+
+    <section class="inner-banner"></section>
     
     <div class="terms-container">
         <h1>Terms of Service</h1>
@@ -122,10 +160,10 @@
         <p>All content, trademarks, logos, and other intellectual property displayed on our website and in connection with our services are owned by IFM Logistics Inc and are protected by applicable copyright, trademark, and other intellectual property laws. You may not use, reproduce, or distribute any of our intellectual property without our express written permission.</p>
 
         <h2>8. Privacy</h2>
-        <p>Your use of our services is also governed by our Privacy Policy. Please review our <a href="privacy-policy.html">Privacy Policy</a> to understand how we collect, use, and protect your personal information.</p>
+        <p>Your use of our services is also governed by our Privacy Policy. Please review our <a href="privacy-policy.html" style="color: #3498db; text-decoration: none;">Privacy Policy</a> to understand how we collect, use, and protect your personal information.</p>
 
         <h2>9. Governing Law</h2>
-        <p>These Terms of Service shall be governed by and construed in accordance with the laws of the United States and the state in which IFM Logistics Inc operates, without regard to its conflict of law provisions.</p>
+        <p>These Terms of Service shall be governed by and construed in accordance with the laws of the United States and the State of Illinois, without regard to its conflict of law provisions.</p>
 
         <h2>10. Dispute Resolution</h2>
         <p>Any disputes arising out of or relating to these Terms of Service or our services shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.</p>
@@ -141,19 +179,115 @@
             <p>If you have questions about these Terms of Service, please contact us:</p>
             <p>
                 <strong>IFM Logistics Inc</strong><br>
-                <strong>Address:</strong> [Your physical address matching IRS SS4 form]<br>
-                <strong>Phone:</strong> [Your phone number]<br>
-                <strong>Email:</strong> [Your email address]<br>
-                <strong>Website:</strong> [Your website URL]
+                <strong>Address:</strong> 375 W. Dundee Rd, Unit 161, Wheeling, IL 60090, USA<br>
+                <strong>Phone:</strong> +1 (765) 222-4545<br>
+                <strong>Email:</strong> safety@ifmlogistics.com<br>
+                <strong>Website:</strong> https://ifmlogistics.com
             </p>
         </div>
     </div>
+
+    <footer id="footer" class="sec-padding">
+      <div class="thm-container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 footer-widget">
+            <div class="about-widget">
+              <a href="#"><img src="https://siplogistics.ca/images/footer-logo.jpg" alt="" /></a>
+              <p>
+                Our team of well-experienced dispatchers provide timely updates
+                via calls and emails. We value our relationship with our
+                customers. In doing so, the following are the two fundamentals
+                of our service at IFM Logistics: Trust and Efficiency
+              </p>
+              <a href="about.html">Read More <i class="fa fa-angle-double-right"></i></a>
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="about.html"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="about.html"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 footer-widget">
+            <div class="pl-30">
+              <div class="title">
+                <h3><span>Our Services</span></h3>
+              </div>
+              <ul class="link-list">
+                <li><a href="services.html">Freight</a></li>
+                <li><a href="services.html">Road Transportation</a></li>
+                <li><a href="services.html">Railway Logistics</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6 footer-widget">
+            <div class="title">
+              <h3><span>Quick Links</span></h3>
+            </div>
+            <ul class="link-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Our Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 footer-widget">
+            <div class="title">
+              <h3><span>Contact Info</span></h3>
+            </div>
+            <ul class="contact-infos">
+              <li>
+                <div class="icon-box">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="text-box">
+                  <p>375 W. Dundee Rd, Unit 161<br>Wheeling, IL 60090, USA</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div class="text-box">
+                  <p>+1 (765) 222-4545</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box">
+                  <i class="fa fa-envelope-o"></i>
+                </div>
+                <div class="text-box">
+                  <p>safety@ifmlogistics.com</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box">
+                  <i class="icon icon-Timer"></i>
+                </div>
+                <div class="text-box">
+                  <p>Monday - Friday : 9.00 AM - 5:00 PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <section class="bottom-bar">
+      <div class="thm-container clearfix">
+        <div class="text-center">
+          <p>Copyright © IFM Logistics Inc 2025. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
     
-    <!-- You can include your existing footer here -->
-    
-    <!-- Link to your existing JS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery js -->
+    <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     
 </body>
 </html>
