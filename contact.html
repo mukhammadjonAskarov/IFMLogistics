@@ -78,53 +78,93 @@
     <link rel="stylesheet" href="css/responsive.css" />
     
     <style>
-      /* SMS Consent Checkbox Styling */
-      .sms-consent-box {
+      /* SMS Consent Checkbox Styling - Fixed for proper layout */
+      .sms-consent-wrapper {
         background: #f8f9fa;
         border: 2px solid #e0e0e0;
-        border-radius: 6px;
-        padding: 15px;
+        border-radius: 8px;
+        padding: 20px;
         margin-top: 15px;
+        margin-bottom: 15px;
       }
       
-      .sms-checkbox-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
+      .sms-checkbox-row {
+        display: table;
+        width: 100%;
       }
       
-      .sms-checkbox-container input[type="checkbox"] {
+      .sms-checkbox-cell {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 15px;
+      }
+      
+      .sms-text-cell {
+        display: table-cell;
+        vertical-align: top;
+        width: 100%;
+      }
+      
+      .sms-consent-wrapper input[type="checkbox"] {
         width: 20px;
         height: 20px;
-        margin-top: 2px;
+        margin: 3px 0 0 0;
         cursor: pointer;
         flex-shrink: 0;
       }
       
-      .sms-consent-text {
-        font-size: 13px;
+      .sms-consent-label {
+        font-size: 14px;
         color: #555;
-        line-height: 1.6;
+        line-height: 1.7;
         margin: 0;
-        cursor: pointer;
+        display: block;
       }
       
-      .sms-consent-text a {
+      .sms-consent-label a {
         color: #3498db;
-        text-decoration: none;
+        text-decoration: underline;
         font-weight: 500;
       }
       
-      .sms-consent-text a:hover {
-        text-decoration: underline;
+      .sms-consent-label a:hover {
+        color: #2980b9;
       }
       
       .sms-consent-note {
         font-size: 12px;
         color: #888;
-        margin-top: 8px;
+        margin-top: 12px;
         margin-bottom: 0;
         font-style: italic;
+        display: block;
+      }
+      
+      .form-footer-note {
+        font-size: 12px;
+        color: #888;
+        margin-top: 15px;
+        text-align: center;
+      }
+      
+      .form-footer-note a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      
+      .form-footer-note a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Responsive fixes */
+      @media (max-width: 768px) {
+        .sms-consent-wrapper {
+          padding: 15px;
+        }
+        
+        .sms-consent-label {
+          font-size: 13px;
+        }
       }
     </style>
   </head>
@@ -206,18 +246,19 @@
                 />
               </p>
               
-              <!-- SMS CONSENT CHECKBOX - TCR COMPLIANT -->
-              <div class="sms-consent-box">
-                <div class="sms-checkbox-container">
-                  <input type="checkbox" id="smsConsent" name="smsConsent">
-                  <label for="smsConsent" class="sms-consent-text">
-                    I consent to receive <strong>conversational and informational</strong> SMS messages from IFM Logistics Inc regarding shipments, deliveries, and logistics services. 
-                    Reply STOP to opt-out; Reply HELP for support. Message and data rates may apply; 
-                    Messaging frequency may vary. 
-                    <a href="privacy-policy.html" target="_blank">View our Privacy Policy</a>
-                  </label>
+              <!-- SMS CONSENT CHECKBOX - TCR COMPLIANT - FIXED LAYOUT -->
+              <div class="sms-consent-wrapper">
+                <div class="sms-checkbox-row">
+                  <div class="sms-checkbox-cell">
+                    <input type="checkbox" id="smsConsent" name="smsConsent">
+                  </div>
+                  <div class="sms-text-cell">
+                    <label for="smsConsent" class="sms-consent-label">
+                      I consent to receive <strong>conversational and informational</strong> SMS messages from IFM Logistics Inc regarding shipments, deliveries, and logistics services. Reply STOP to opt-out; Reply HELP for support. Message and data rates may apply; Messaging frequency may vary. <a href="privacy-policy.html" target="_blank">View our Privacy Policy</a>
+                    </label>
+                  </div>
                 </div>
-                <p class="sms-consent-note">Optional - You can still contact us without SMS consent</p>
+                <span class="sms-consent-note">Optional - You can still contact us without SMS consent</span>
               </div>
               
               <p>
@@ -238,10 +279,10 @@
               <button type="submit" id="submit" class="thm-btn">
                 Submit Now <i class="fa fa-arrow-right"></i>
               </button>
-              <p style="font-size: 12px; color: #888; margin-top: 15px;">
+              <p class="form-footer-note">
                 By submitting this form, you agree to our 
-                <a href="privacy-policy.html" style="color: #3498db;">Privacy Policy</a> and 
-                <a href="terms.html" style="color: #3498db;">Terms of Service</a>.
+                <a href="privacy-policy.html">Privacy Policy</a> and 
+                <a href="terms.html">Terms of Service</a>.
               </p>
             </form>
           </div>
